@@ -1,0 +1,10 @@
+eclipse.preferences.version=1
+encoding//src/main/java/com/hcq/utils/AesUtil.java=gbk
+encoding//src/main/java/com/hcq/utils/DBUtil.java=gbk
+encoding//src/main/java/com/hcq/utils/DateUtils.java=gbk
+encoding//src/main/java/com/hcq/utils/Encrypt.java=gbk
+encoding//src/main/java/com/hcq/utils/LuceneUtil.java=gbk
+encoding//src/main/java/com/hcq/utils/SystemInfo.java=gbk
+encoding//src/main/webapp/manage.html=UTF-8
+encoding//src/main/webapp/reg_success.html=UTF-8
+encoding/<project>=gbk

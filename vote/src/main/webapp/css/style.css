@@ -1,0 +1,83 @@
+body { font-size:12px; background:#fff; color:#333; line-height:25px; margin:0; padding:10px 0; font-family:宋体; }
+h2,h4,p,ul,li,dl,dt,dd,form,input { margin:0; padding:0; }
+img { border:0; }
+em { font-style:normal; }
+.wrap { width:800px; margin:0px auto; }
+.red, a.red { color:#f00; }
+.input-text { padding:2px 4px; border:1px solid #79a4cf; }
+.input-button { border:none; }
+a:link, a:visited { color:#06C; text-decoration:none; }
+a:hover, a:active { text-decoration:underline; }
+.box { border:2px solid #79a4cf; }
+.box h2 { background:#79a4cf; line-height:35px; font-size:14px; padding:0 10px; color:#fff; }
+.box .content { font-size:14px; padding:20px 40px; }
+#navbar { background:#dae8f5; border-top:4px solid #5184af; line-height:30px; height:30px; }
+#navbar .profile { float:left; padding:0px 10px; }
+#navbar .profile .addnew a { margin:0px 40px; background:url(../images/addnew.gif) left center no-repeat; padding-left:18px; }
+#navbar .profile .modify a { margin:0px 40px; background:url(../images/edit.gif) left center no-repeat; padding-left:18px; }
+#navbar .profile .return a { margin:0px 40px; background:url(../images/new.gif) left center no-repeat; padding-left:18px; }
+
+#navbar .search { text-align:right; }
+#navbar .search input { margin:3px auto; vertical-align:middle; }
+#navbar .search .input-button { background:url(../images/button_search.gif); width:40px; height:22px; margin:0px 4px; }
+#login { margin:10px auto; }
+#login .main { background:#79a4cf url(../images/voteBanner.jpg) no-repeat; height:154px; padding-left:190px; position:relative; }
+#login .main .corner { float:right; background:url(../images/bannerCorner.jpg); width:20px; height:154px; }
+#login .main .introduce { color:#fff; line-height:30px; padding:10px; }
+#login .main .introduce h2 { font-size:14px; }
+#login .main .introduce p { text-indent:2em; }
+#login .main .login { position:absolute; background:#fff; right:40px; top:-20px; border:1px solid #939393; padding:15px; width:220px; }
+#login .main .login h2 { line-height:30px; font-size:14px; color:#3e638d; border-bottom:1px solid #898989; background:url(../images/arrow_down.gif) 70px center no-repeat; }
+#login dl { line-height:40px; padding:10px; }
+#login dl dt { float:left; clear:left; width:50px; }
+#login dl dd { margin-left:50px; }
+#login dl dd input { vertical-align:middle; }
+#login dl dd .input-text { margin:8px 0px; width:134px; }
+#login dl dd .input-text-over { border-color:#72bb09; }
+#login dl dd .input-button { width:77px; height:32px; padding-left:10px; font-weight:bold; background:url(../images/button_login.gif) left center no-repeat; color:#333; }
+#login dl dd .input-button-over { background:url(../images/button_login_over.gif) no-repeat; color:#000; }
+#login .error { color:#f00; text-align:center; clear:both; }
+#newVoteList { width:500px; }
+#newVoteList h2 { line-height:24px; font-size:12px; color:#3e638d; border-bottom:1px dotted #ccc; background:url(../images/arrow_down.gif) 60px center no-repeat; }
+#newVoteList ul { line-height:30px; margin:10px; }
+#newVoteList ul li { background:url(../images/quote_left.gif) left center no-repeat; padding-left:20px; }
+#newVoteList ul li a { color:#666; background:url(../images/quote_right.gif) right center no-repeat; padding-right:20px; }
+#newVoteList ul li .time { float:right; font-size:10px; color:#999; }
+#footer { border-top:1px solid #79a4cf; margin-top:30px; text-align:center; line-height:30px; color:#666; }
+#register { width:600px; margin:20px auto; }
+#register dl { line-height:40px; }
+#register dl dt { float:left; clear:left; width:80px; text-align:right; }
+#register dl dd { margin-left:80px; }
+#register dl dd input { margin:8px 0; font-size:14px; }
+#register dl dd .input-button { background:url(../images/button_register.gif); width:120px; height:30px; }
+#message { width:400px; margin:50px auto; }
+#vote { margin:10px auto; }
+#vote h2 { color:#333; font-size:16px; background:url(../images/title_ico.gif) 5px center no-repeat; line-height:35px; padding-left:50px; }
+#vote .list { margin-top:10px; list-style:none; }
+#vote .list li { border-top:1px solid #e4e4e4; padding:10px; }
+#vote .list li.odd { background:#069; }
+#vote .list li h4 { font-size:14px; background:url(../images/vote_icon.gif) left 4px no-repeat; padding-left:20px; }
+#vote .list li h4 em { float:right; font-weight:normal; font-size:12px; background:url(../images/edit.gif) left center no-repeat; padding-left:18px; }
+#vote .list li .join { float:right; }
+#vote .list li .join a { display:block; background:url(../images/join.gif) left center no-repeat; padding-left:18px; }
+#vote .list li .info { color:#666; margin-left:20px; padding:5px 0; }
+#vote .list li .voteView { padding:5px 40px; }
+#vote .list li .voteView input { margin:0px 15px; }
+#vote .list li ol li { border:none; }
+#vote .list li ol li input { margin:0px 5px; vertical-align:middle; }
+#vote .list li ol li .rate { line-height:14px; }
+#vote .list li ol li .rate .ratebg { float:left; width:500px; background:#eee; }
+#vote .list li ol li .rate .percent { border:1px solid #d9c100; background:#feec04; height:12px; overflow:hidden; }
+#vote .list li ol li .rate p { margin-left:510px; }
+#vote .list li ol li .rate p span { margin-left:10px; color:#999; }
+.goback { margin:20px auto; font-size:14px; line-height:30px; }
+.goback a { display:block; padding-left:50px; background:url(../images/goback.gif) left center no-repeat; float:left; clear:right; }
+#voteManage { width:600px; margin:20px auto; }
+#voteManage dl { line-height:40px; }
+#voteManage dl dt { float:left; clear:left; width:80px; text-align:right; }
+#voteManage dl dd { margin-left:80px; }
+#voteManage dl dd input { font-size:14px; margin:8px 0; vertical-align:middle; }
+#voteManage dl dd .input-text { width:380px; }
+#voteManage dl dd .del { font-size:12px; margin:0px 5px; }
+#voteManage dl dd.button img { vertical-align:middle; }
+#voteManage dl dd.button a { margin:0px 10px; }

@@ -1,0 +1,133 @@
+  <!DOCTYPE html>
+  <html>
+  <head>
+  <meta charset="utf-8" />
+  <title>投票列表</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css" />
+  <script src="js/jquery.min.js"></script>
+  <script type="text/javascript">
+	$(function(){
+			$.ajax({
+				type:"post",
+				url:"voteSubject_findAll.action",
+				dataType:"json",
+				success:function(data){
+					if(data.code== 1){
+						$("#list").html("");
+						$(data.obj).each(function(index,item){
+							var str = "<li ";
+							if(index%2 ==0){
+								str +='calss="odd"';
+							}
+							str+='><h4>'
+							+'<a href="vote.html?vsid='+item.vsid+'">' +item.title+'</a>'
+							+'<h4><div class="join">'
+							+'<a href="vote.html?vsid='+item.vsid+'">我要参与</a></div>'
+							+'<p class="info">共有 '+item.optioncount+'个选项，已有 '+item.usercount+'网友参与了投票。</p> '
+							+'</li>';
+							$("#list").html($("#list").html()+str);
+						});
+					}else{
+						alert("查询失败！原因"+data.msg);
+					}
+				}
+			});
+	
+			$.ajax({
+				type:"post",
+				url:"voteSubject_getLoginUser.action",
+				dataType:"json",
+				success:function(data){
+					if(data.code ==1){
+						$("#loginuser").html(data.obj.uname);
+				}else{
+					alert("您还没有登录！");
+					location.href="login.html";
+					}
+				}
+			});
+			
+			$("#sub").click(function(){
+				$.ajax({
+					type:"post",
+					data:$("#searchform").serialize(),
+					url:"search_subject",
+					dataType:"json",
+					success:function(data){
+						if(data.code== 1){
+							$("#list").html("");
+							if(data.obj.length==0){
+								var html='<h1>查无结果！试试其他关键字或者<a href="manage.html">返回列表</a></h1>';
+								$("#list").html(html);
+							}
+							$(data.obj).each(function(index,item){
+								var str = "<li ";
+								if(index%2 ==0){
+									str +='calss="odd"';
+								}
+								str+='><h4>'
+								+'<a href="">' +item.title+'</a>'
+								+'<h4><div class="join">'
+								+'<a href="vote.html?vsid='+item.vsid+'">我要参与</a></div>'
+								+'<p class="info">共有 '+item.optioncount+'个选项，已有 '+item.usercount+'网友参与了投票。</p> '
+								+'</li>';
+								$("#list").html($("#list").html()+str);
+							});
+						}else{
+							alert("查询失败！原因"+data.msg);
+						}
+					}
+				});
+			});	
+	});
+</script>
+  </head>
+  <body>
+  <div id="header" class="wrap">
+  	<img src="images/logo.gif" />
+  </div>
+  <div id="navbar" class="wrap">
+  	<div class="profile" id="user">
+  		您好，<span id="loginuser"></span>
+  		<span class="return"><a href="manage.html">返回列表</a></span>
+  		<span class="addnew"><a href="add.html">添加新投票</a></span>
+  		<span class="modify"><a href="Subject!modify.action">维护</a></span>
+  		
+  	</div>
+  	<div class="search">
+  		<form method="post" id="searchform" action="search.action">
+  			<input type="text" name="keyword" id="keyword" class="input-text" value=""/><input type="button" id="sub" name="sub" class="input-button" value="" />
+  		</form>
+  	</div>
+  </div>
+
+  <div id="vote" class="wrap">
+  	<h2>投票列表</h2>
+  	<ul class="list" id="list">
+  	
+  	</ul>
+  </div>
+  <div id="footer" class="wrap">
+  	源辰信息 &copy; 版权所有
+  </div>
+  <script type="text/javascript">
+  function get(vsid){
+	  $.ajax({
+			type:"post",
+			url:"voteOption_findOption",
+			data:"vsid="+vsid,
+			dataType:"json",
+			success:function(data){
+				if(data.code== 1){
+					
+				}else{
+					alert("查询失败！原因"+data.msg);
+				}
+			}
+		});
+  }
+  
+  
+  </script>
+  </body>
+  </html>

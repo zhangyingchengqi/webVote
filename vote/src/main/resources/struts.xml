@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<!-- 关闭动态方法   action：方法名 -->
+    <constant name="struts.enable.DynamicMethodInvocation" value="false" />
+    <!-- 启用开发者模式 -->
+    <constant name="struts.devMode" value="true" />
+	<constant name="struts.i18n.encoding" value="utf-8"/> 
+	<package name="mypackge" namespace="/" extends="json-default">
+		<!-- 注册拦截器到struts2框架,这样struts2就知道增加 了一个拦截器 -->
+		<interceptors>
+			<interceptor name="time" class="com.hcq.web.interceptors.IndexInterceptor"></interceptor>
+			<interceptor name="log" class="com.hcq.web.interceptors.LogInterceptor"></interceptor>
+			<interceptor name="index" class="com.hcq.web.interceptors.CreateIndex"></interceptor>
+			<!-- <interceptor-stack name="myStack"> 
+				<interceptor-ref name="log"></interceptor-ref>  
+                <interceptor-ref name="defaultStack"></interceptor-ref>  
+			</interceptor-stack> -->
+		</interceptors>
+		<!-- <global-results>  
+      	<result name="error">/common/error.html</result>  
+    	</global-results>   -->
+	</package>
+</struts>
